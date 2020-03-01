@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />-->
+    <link rel="stylesheet" href="./style.css" class="css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row pt-5">
+            <div class="col-md-12 text-center">
+                <h1 for="" class="d-inline">Puntaje </h1>
+                <h1 for="" class="d-inline" id="score"></h1>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-md-3">
+                <ul class="text-white">
+                    INSTRUCCIONES<br><br>
+                    <li>Muévase con las flechas de su teclado.</li>
+                    <li>La serpiente es de color rojo.</li>
+                    <li>La comida de la serpiente es de color verde.</li>
+                    <li>Si la serpiente toca los límites del tablero, el juego se dará por terminado.</li>
+                    <li>Si la cabeza de la serpiente choca con su cuerpo el juego se dará por terminado.</li>   
+                    <li>A medida que el puntaje aumenta la velocidad de la serpiente también lo hace.</li>             
+                </ul>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center pt-5">
+                <table id="p1">
+                    <tr id="p1-1">
+                        <td id="p1-ta1"><a href="" class="space" id="p1-a1">■</a></td>
+                        <td id="p1-tb1"><a href="" class="space" id="p1-b1">■</a></td>
+                        <td id="p1-tc1"><a href="" class="space" id="p1-c1">■</a></td>
+                        <td id="p1-td1"><a href="" class="space" id="p1-d1">■</a></td>
+                        <td id="p1-te1"><a href="" class="space" id="p1-e1">■</a></td>
+                        <td id="p1-tf1"><a href="" class="space" id="p1-f1">■</a></td>
+                        <td id="p1-tg1"><a href="" class="space" id="p1-g1">■</a></td>
+                        <td id="p1-th1"><a href="" class="space" id="p1-h1">■</a></td>
+                        <td id="p1-ti1"><a href="" class="space" id="p1-i1">■</a></td>
+                        <td id="p1-tj1"><a href="" class="space" id="p1-j1">■</a></td>
+                    </tr>
+                    <tr id="p1-2">
+
+                        <td id="p1-ta2"><a href="" class="space" id="p1-a2">■</a></td>
+                        <td id="p1-tb2"><a href="" class="space" id="p1-b2">■</a></td>
+                        <td id="p1-tc2"><a href="" class="space" id="p1-c2">■</a></td>
+                        <td id="p1-td2"><a href="" class="space" id="p1-d2">■</a></td>
+                        <td id="p1-te2"><a href="" class="space" id="p1-e2">■</a></td>
+                        <td id="p1-tf2"><a href="" class="space" id="p1-f2">■</a></td>
+                        <td id="p1-tg2"><a href="" class="space" id="p1-g2">■</a></td>
+                        <td id="p1-th2"><a href="" class="space" id="p1-h2">■</a></td>
+                        <td id="p1-ti2"><a href="" class="space" id="p1-i2">■</a></td>
+                        <td id="p1-tj2"><a href="" class="space" id="p1-j2">■</a></td>
+                    </tr>
+                    <tr id="p1-3">
+
+                        <td id="p1-ta3"><a href="" class="space" id="p1-a3">■</a></td>
+                        <td id="p1-tb3"><a href="" class="space" id="p1-b3">■</a></td>
+                        <td id="p1-tc3"><a href="" class="space" id="p1-c3">■</a></td>
+                        <td id="p1-td3"><a href="" class="space" id="p1-d3">■</a></td>
+                        <td id="p1-te3"><a href="" class="space" id="p1-e3">■</a></td>
+                        <td id="p1-tf3"><a href="" class="space" id="p1-f3">■</a></td>
+                        <td id="p1-tg3"><a href="" class="space" id="p1-g3">■</a></td>
+                        <td id="p1-th3"><a href="" class="space" id="p1-h3">■</a></td>
+                        <td id="p1-ti3"><a href="" class="space" id="p1-i3">■</a></td>
+                        <td id="p1-tj3"><a href="" class="space" id="p1-j3">■</a></td>
+                    </tr>
+                    <tr id="p1-4">
+
+                        <td id="p1-ta4"><a href="" class="space" id="p1-a4">■</a></td>
+                        <td id="p1-tb4"><a href="" class="space" id="p1-b4">■</a></td>
+                        <td id="p1-tc4"><a href="" class="space" id="p1-c4">■</a></td>
+                        <td id="p1-td4"><a href="" class="space" id="p1-d4">■</a></td>
+                        <td id="p1-te4"><a href="" class="space" id="p1-e4">■</a></td>
+                        <td id="p1-tf4"><a href="" class="space" id="p1-f4">■</a></td>
+                        <td id="p1-tg4"><a href="" class="space" id="p1-g4">■</a></td>
+                        <td id="p1-th4"><a href="" class="space" id="p1-h4">■</a></td>
+                        <td id="p1-ti4"><a href="" class="space" id="p1-i4">■</a></td>
+                        <td id="p1-tj4"><a href="" class="space" id="p1-j4">■</a></td>
+                    </tr>
+                    <tr id="p1-5">
+
+                        <td id="p1-ta5"><a href="" class="space" id="p1-a5">■</a></td>
+                        <td id="p1-tb5"><a href="" class="space" id="p1-b5">■</a></td>
+                        <td id="p1-tc5"><a href="" class="space" id="p1-c5">■</a></td>
+                        <td id="p1-td5"><a href="" class="space" id="p1-d5">■</a></td>
+                        <td id="p1-te5"><a href="" class="space" id="p1-e5">■</a></td>
+                        <td id="p1-tf5"><a href="" class="space" id="p1-f5">■</a></td>
+                        <td id="p1-tg5"><a href="" class="space" id="p1-g5">■</a></td>
+                        <td id="p1-th5"><a href="" class="space" id="p1-h5">■</a></td>
+                        <td id="p1-ti5"><a href="" class="space" id="p1-i5">■</a></td>
+                        <td id="p1-tj5"><a href="" class="space" id="p1-j5">■</a></td>
+                    </tr>
+                    <tr id="p1-6">
+
+                        <td id="p1-ta6"><a href="" class="space" id="p1-a6">■</a></td>
+                        <td id="p1-tb6"><a href="" class="space" id="p1-b6">■</a></td>
+                        <td id="p1-tc6"><a href="" class="space" id="p1-c6">■</a></td>
+                        <td id="p1-td6"><a href="" class="space" id="p1-d6">■</a></td>
+                        <td id="p1-te6"><a href="" class="space" id="p1-e6">■</a></td>
+                        <td id="p1-tf6"><a href="" class="space" id="p1-f6">■</a></td>
+                        <td id="p1-tg6"><a href="" class="space" id="p1-g6">■</a></td>
+                        <td id="p1-th6"><a href="" class="space" id="p1-h6">■</a></td>
+                        <td id="p1-ti6"><a href="" class="space" id="p1-i6">■</a></td>
+                        <td id="p1-tj6"><a href="" class="space" id="p1-j6">■</a></td>
+                    </tr>
+                    <tr id="p1-7">
+
+                        <td id="p1-ta7"><a href="" class="space" id="p1-a7">■</a></td>
+                        <td id="p1-tb7"><a href="" class="space" id="p1-b7">■</a></td>
+                        <td id="p1-tc7"><a href="" class="space" id="p1-c7">■</a></td>
+                        <td id="p1-td7"><a href="" class="space" id="p1-d7">■</a></td>
+                        <td id="p1-te7"><a href="" class="space" id="p1-e7">■</a></td>
+                        <td id="p1-tf7"><a href="" class="space" id="p1-f7">■</a></td>
+                        <td id="p1-tg7"><a href="" class="space" id="p1-g7">■</a></td>
+                        <td id="p1-th7"><a href="" class="space" id="p1-h7">■</a></td>
+                        <td id="p1-ti7"><a href="" class="space" id="p1-i7">■</a></td>
+                        <td id="p1-tj7"><a href="" class="space" id="p1-j7">■</a></td>
+                    </tr>
+                    <tr id="p1-8">
+
+                        <td id="p1-ta8"><a href="" class="space" id="p1-a8">■</a></td>
+                        <td id="p1-tb8"><a href="" class="space" id="p1-b8">■</a></td>
+                        <td id="p1-tc8"><a href="" class="space" id="p1-c8">■</a></td>
+                        <td id="p1-td8"><a href="" class="space" id="p1-d8">■</a></td>
+                        <td id="p1-te8"><a href="" class="space" id="p1-e8">■</a></td>
+                        <td id="p1-tf8"><a href="" class="space" id="p1-f8">■</a></td>
+                        <td id="p1-tg8"><a href="" class="space" id="p1-g8">■</a></td>
+                        <td id="p1-th8"><a href="" class="space" id="p1-h8">■</a></td>
+                        <td id="p1-ti8"><a href="" class="space" id="p1-i8">■</a></td>
+                        <td id="p1-tj8"><a href="" class="space" id="p1-j8">■</a></td>
+                    </tr>
+                    <tr id="p1-9">
+
+                        <td id="p1-ta9"><a href="" class="space" id="p1-a9">■</a></td>
+                        <td id="p1-tb9"><a href="" class="space" id="p1-b9">■</a></td>
+                        <td id="p1-tc9"><a href="" class="space" id="p1-c9">■</a></td>
+                        <td id="p1-td9"><a href="" class="space" id="p1-d9">■</a></td>
+                        <td id="p1-te9"><a href="" class="space" id="p1-e9">■</a></td>
+                        <td id="p1-tf9"><a href="" class="space" id="p1-f9">■</a></td>
+                        <td id="p1-tg9"><a href="" class="space" id="p1-g9">■</a></td>
+                        <td id="p1-th9"><a href="" class="space" id="p1-h9">■</a></td>
+                        <td id="p1-ti9"><a href="" class="space" id="p1-i9">■</a></td>
+                        <td id="p1-tj9"><a href="" class="space" id="p1-j9">■</a></td>
+                    </tr>
+                    <tr id="p1-10">
+
+                        <td id="p1-ta10"><a href="" class="space" id="p1-a10">■</a></td>
+                        <td id="p1-tb10"><a href="" class="space" id="p1-b10">■</a></td>
+                        <td id="p1-tc10"><a href="" class="space" id="p1-c10">■</a></td>
+                        <td id="p1-td10"><a href="" class="space" id="p1-d10">■</a></td>
+                        <td id="p1-te10"><a href="" class="space" id="p1-e10">■</a></td>
+                        <td id="p1-tf10"><a href="" class="space" id="p1-f10">■</a></td>
+                        <td id="p1-tg10"><a href="" class="space" id="p1-g10">■</a></td>
+                        <td id="p1-th10"><a href="" class="space" id="p1-h10">■</a></td>
+                        <td id="p1-ti10"><a href="" class="space" id="p1-i10">■</a></td>
+                        <td id="p1-tj10"><a href="" class="space" id="p1-j10">■</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+
+        <script src="./main.js"></script>
+</body>
+
+</html>

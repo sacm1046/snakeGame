@@ -1,0 +1,19 @@
+body{
+    background: black;
+}
+td{
+    border:5px black solid;
+    background: white;
+    width: 30px;
+    text-align: center;
+}
+th{
+    text-align: center;
+}
+a,a:hover{
+    color: black;
+    text-decoration: none;
+}
+h1{
+    color:white
+}
