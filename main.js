@@ -21,6 +21,7 @@ let left = 0
 let rigth = 0
 let time = 500
 let count = 0
+let bodySnake = []
 
 function finish() {
     location.reload()
@@ -41,15 +42,17 @@ posSnake();
 function posSnakeFood() {
     let randX1 = Math.floor(Math.random() * 10)
     let randY1 = Math.floor(Math.random() * 10)
-    if ([(matrizPlayer[randX1][randY1])] === snake) {
-        randX1 = Math.floor(Math.random() * 10)
-        randY1 = Math.floor(Math.random() * 10)
-        food = [(matrizPlayer[randX1][randY1])];
+    for (let x = 0; x < bodySnake.length+1; x++) {
+        if ([(matrizPlayer[randX1][randY1])] === snake[0] || [(matrizPlayer[randX1][randY1])] === bodySnake[x]) {
+            randX1 = Math.floor(Math.random() * 10)
+            randY1 = Math.floor(Math.random() * 10)
+            food = [(matrizPlayer[randX1][randY1])]
+        }
+        else {
+            food = [(matrizPlayer[randX1][randY1])]
+        }
+        document.getElementById(food[0]).style.background = "Green"
     }
-    else {
-        food = [(matrizPlayer[randX1][randY1])];
-    }
-    document.getElementById(food[0]).style.background = "Green"
 }
 posSnakeFood();
 
@@ -64,10 +67,20 @@ function eaten() {
 function moveUp() {
     if (randomX1 > 0) {
         document.getElementById(snake[0]).style.background = "white"
+        for (let x = 0; x < bodySnake.length; x++) {
+            document.getElementById(bodySnake[x]).style.background = "white"
+        }
+        bodySnake.unshift(matrizPlayer[randomX1][randomY1])
+        bodySnake.splice(count + 1, 1000);
+        console.log(bodySnake)
         randomX1 = randomX1 - 1
         snake = [(matrizPlayer[randomX1][randomY1])]
-        for (let x = 0; x < snake.length; x++) {
-            document.getElementById(snake[x]).style.background = "red"
+        document.getElementById(snake[0]).style.background = "red"
+        for (let x = 0; x < bodySnake.length - 1; x++) {
+            document.getElementById(bodySnake[x]).style.background = "red"
+            if(snake[0]===bodySnake[x]){
+                finish()
+            }
         }
         eaten()
     }
@@ -78,10 +91,20 @@ function moveUp() {
 function moveDown() {
     if (randomX1 < 9) {
         document.getElementById(snake[0]).style.background = "white"
+        for (let x = 0; x < bodySnake.length; x++) {
+            document.getElementById(bodySnake[x]).style.background = "white"
+        }
+        bodySnake.unshift(matrizPlayer[randomX1][randomY1])
+        bodySnake.splice(count + 1, 1000);
+        console.log(bodySnake)
         randomX1 = randomX1 + 1
         snake = [(matrizPlayer[randomX1][randomY1])]
-        for (let x = 0; x < snake.length; x++) {
-            document.getElementById(snake[x]).style.background = "red"
+        document.getElementById(snake[0]).style.background = "red"
+        for (let x = 0; x < bodySnake.length - 1; x++) {
+            document.getElementById(bodySnake[x]).style.background = "red"
+            if(snake[0]===bodySnake[x]){
+                finish()
+            }
         }
         eaten()
     }
@@ -92,10 +115,20 @@ function moveDown() {
 function moveLeft() {
     if (randomY1 > 0) {
         document.getElementById(snake[0]).style.background = "white"
+        for (let x = 0; x < bodySnake.length; x++) {
+            document.getElementById(bodySnake[x]).style.background = "white"
+        }
+        bodySnake.unshift(matrizPlayer[randomX1][randomY1])
+        bodySnake.splice(count + 1, 1000);
+        console.log(bodySnake)
         randomY1 = randomY1 - 1
         snake = [(matrizPlayer[randomX1][randomY1])]
-        for (let x = 0; x < snake.length; x++) {
-            document.getElementById(snake[x]).style.background = "red"
+        document.getElementById(snake[0]).style.background = "red"
+        for (let x = 0; x < bodySnake.length - 1; x++) {
+            document.getElementById(bodySnake[x]).style.background = "red"
+            if(snake[0]===bodySnake[x]){
+                finish()
+            }
         }
         eaten()
     }
@@ -106,10 +139,20 @@ function moveLeft() {
 function moveRigth() {
     if (randomY1 < 9) {
         document.getElementById(snake[0]).style.background = "white"
+        for (let x = 0; x < bodySnake.length; x++) {
+            document.getElementById(bodySnake[x]).style.background = "white"
+        }
+        bodySnake.unshift(matrizPlayer[randomX1][randomY1])
+        bodySnake.splice(count + 1, 1000);
+        console.log(bodySnake)
         randomY1 = randomY1 + 1
         snake = [(matrizPlayer[randomX1][randomY1])]
-        for (let x = 0; x < snake.length; x++) {
-            document.getElementById(snake[x]).style.background = "red"
+        document.getElementById(snake[0]).style.background = "red"
+        for (let x = 0; x < bodySnake.length - 1; x++) {
+            document.getElementById(bodySnake[x]).style.background = "red"
+            if(snake[0]===bodySnake[x]){
+                finish()
+            }
         }
         eaten()
     }
